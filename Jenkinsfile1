@@ -11,12 +11,7 @@ pipeline {
             // Get some code from a GitHub repository
             git poll: false, url: 'https://github.com/beakerman29/cicd-pipeline-train-schedule-git.git'
 
-            // Build the project using the gradelwrapper
-            if (isUnix()) {
-                sh './gradlew clean build'
-            } else {
-                bat 'gradlew.bat clean build'
-            }
+            sh './gradlew clean build'
         }
       }
    }
