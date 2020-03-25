@@ -5,7 +5,7 @@ pipeline {
    stages {
       stage('Build') {
         agent { 
-            node('Cmaster')
+            node('master')
         }
         steps {
             // Get some code from a GitHub repository
